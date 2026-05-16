@@ -82,10 +82,10 @@ interface Categoria {
 
 ```bash
 # Clone o repositório
-git clone https://github.com/clarodriguess/projeto_final_bloco_03.git
+git clone https://github.com/clarodriguess/pharmacy-ecommerce-frontend
 
 # Entre na pasta
-cd projeto_final_bloco_03
+cd pharmacy-ecommerce-frontend
 
 # Instale as dependências
 npm install
