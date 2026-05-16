@@ -8,7 +8,7 @@ function Navbar() {
     return (
         <>
             <div className='fixed top-0 left-0 z-50 flex justify-center w-full py-2 text-white bg-blue-950 '>
-                <div className="container flex items-center justify-between mx-6 mt-2 text-lg">
+                <div className="container flex items-center justify-between mx-6 mt-2 text-md">
                     
                     <Link to='/home'>
                         <img
@@ -22,7 +22,7 @@ function Navbar() {
                         <SearchForm />
                     </div>
                     
-                    <div className='items-center hidden gap-4 py-4 md:flex font-light '>
+                    <div className='items-center hidden gap-4 py-4 md:flex '>
                         
                         <Link to='/categorias' className='hover:underline'>Categorias</Link>
                         <Link to='/cadastrarcategoria' className='hover:underline'>Cadastrar Categoria</Link>
