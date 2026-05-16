@@ -1,6 +1,15 @@
-# 💊 Farmácia React — Projeto Final Bloco 03
+# 💊 Pharmacy E-commerce — Frontend
 
-Aplicação web desenvolvida em **React + TypeScript** para gerenciamento de produtos farmacêuticos, consumindo uma API REST própria. O sistema permite visualizar, cadastrar, editar e excluir produtos e seus relacionamentos de categoria.
+Aplicação web desenvolvida em **React + TypeScript** para gerenciamento de produtos farmacêuticos, consumindo a [Pharmacy E-commerce API](https://github.com/clarodriguess/pharmacy-ecommerce-api) desenvolvida com NestJS. O sistema permite visualizar, cadastrar, editar e excluir produtos e categorias.
+
+---
+
+## 🔗 Repositórios do Projeto
+
+| Camada | Repositório | Tecnologias |
+|---|---|---|
+| **Frontend** | [pharmacy-ecommerce-frontend](https://github.com/clarodriguess/pharmacy-ecommerce-frontend) | React · TypeScript · Tailwind |
+| **Backend** | [pharmacy-ecommerce-api](https://github.com/clarodriguess/pharmacy-ecommerce-api) | NestJS · TypeORM · MySQL |
 
 ---
 
@@ -36,8 +45,6 @@ src/
 
 ### Produto
 
-Representa um item do estoque da farmácia.
-
 ```ts
 interface Produto {
   id: number;
@@ -49,14 +56,12 @@ interface Produto {
 }
 ```
 
-### Categoria (Relacionamento)
-
-Agrupa os produtos por tipo ou finalidade.
+### Categoria
 
 ```ts
 interface Categoria {
   id: number;
-  tipo: string;
+  nome: string;
   descricao: string;
   produto?: Produto[];
 }
@@ -71,8 +76,7 @@ interface Categoria {
 ### Pré-requisitos
 
 - Node.js 18+
-- npm ou yarn
-- API backend rodando localmente
+- API backend rodando em `http://localhost:4000` → [veja como rodar a API](https://github.com/clarodriguess/pharmacy-ecommerce-api)
 
 ### Instalação
 
@@ -87,16 +91,6 @@ cd projeto_final_bloco_03
 npm install
 ```
 
-### Configuração da API
-
-Certifique-se de que a sua API está rodando. Por padrão, o Axios aponta para:
-
-```
-http://localhost:8080
-```
-
-Se necessário, ajuste a `baseURL` no arquivo de configuração do Axios em `src/services/`.
-
 ### Executar em desenvolvimento
 
 ```bash
@@ -104,6 +98,8 @@ npm run dev
 ```
 
 Acesse em: [http://localhost:5173](http://localhost:5173)
+
+> ⚠️ Certifique-se de que a API está rodando antes de iniciar o frontend.
 
 ### Build para produção
 
@@ -115,18 +111,25 @@ npm run build
 
 ## 🔗 Endpoints Consumidos
 
-| Método | Endpoint | Descrição |
+### 📁 Categorias — `/categorias`
+
+| Método | Rota | Descrição |
+|---|---|---|
+| GET | `/categorias` | Lista todas as categorias |
+| GET | `/categorias/:id` | Busca categoria por ID |
+| POST | `/categorias` | Cadastra nova categoria |
+| PUT | `/categorias` | Atualiza categoria |
+| DELETE | `/categorias/:id` | Remove categoria |
+
+### 💊 Produtos — `/produtos`
+
+| Método | Rota | Descrição |
 |---|---|---|
 | GET | `/produtos` | Lista todos os produtos |
 | GET | `/produtos/:id` | Busca produto por ID |
 | POST | `/produtos` | Cadastra novo produto |
 | PUT | `/produtos` | Atualiza produto |
 | DELETE | `/produtos/:id` | Remove produto |
-| GET | `/categorias` | Lista todas as categorias |
-| GET | `/categorias/:id` | Busca categoria por ID |
-| POST | `/categorias` | Cadastra nova categoria |
-| PUT | `/categorias` | Atualiza categoria |
-| DELETE | `/categorias/:id` | Remove categoria |
 
 ---
 
@@ -144,6 +147,6 @@ npm run build
 
 ## 👩‍💻 Autora
 
-Desenvolvido por **Clarisse Rodrigues** como projeto final do Bloco 03.
+Desenvolvido por **Clarisse Rodrigues** como projeto final do Bloco 03 do Bootcamp FullStack - Generation Brasil
 
 [![GitHub](https://img.shields.io/badge/GitHub-clarodriguess-181717?style=flat&logo=github)](https://github.com/clarodriguess)
