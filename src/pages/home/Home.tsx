@@ -10,7 +10,7 @@ function Home() {
 
   return (
      <>
-            <div className="bg-stone-300 flex justify-center h-[90vh] pt-30">
+            <div className="bg-(--color-background) flex justify-center h-[90vh] pt-30">
                 <div className='container grid grid-cols-1 md:grid-cols-2 text-gray-800'>
 
                     
@@ -24,11 +24,11 @@ function Home() {
                         </p>
                         <div className="flex justify-around gap-4">
                           <Link to="/cadastrarproduto" 
-                          className="text-base border border-gray-500 px-4 py-2 rounded-md hover:bg-white hover:text-black hover:border-gray-800 hover:border-2">
+                          className="text-base border border-gray-500 px-4 py-2 rounded-md hover:bg-(--color-destaq) hover:text-white hover:border-gray-500 ">
                         Novo Produto
                         </Link>
                         <Link to="/produtos" 
-                        className="text-base bg-slate-100 text-slate-900 border-2 border-slate-100 px-4 py-2 rounded-md hover:bg-white hover:text-black hover:border-gray-800">
+                        className="text-base bg-(--color-primary-light) text-slate-900 border border-gray-400  px-4 py-2 rounded-md hover:bg-(--color-destaq) hover:text-white hover:border-gray-500 ">
                         Ver Produtos
                         </Link>
                         </div>

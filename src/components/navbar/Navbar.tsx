@@ -7,7 +7,7 @@ import SearchForm from "./SearchForm"
 function Navbar() {
     return (
         <>
-            <div className='fixed top-0 left-0 z-50 flex justify-center w-full py-2 text-white bg-blue-950 '>
+            <div className='fixed top-0 left-0 z-50 flex justify-center w-full py-2 text-white bg-(--color-primary) shadow-md'>
                 <div className="container flex items-center justify-between mx-6 mt-2 text-md">
                     
                     <Link to='/home'>

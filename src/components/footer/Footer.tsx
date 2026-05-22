@@ -3,7 +3,7 @@
 function Footer() {
     return (
         <>
-            <div className="flex justify-center bg-blue-950 text-white">
+            <div className="flex justify-center bg-(--color-primary) text-white">
                 <div className="container flex flex-col items-center py-4">
                     <p className='text-xs font-light'>
                         Farmacia Online Generation</p>
